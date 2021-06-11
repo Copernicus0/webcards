@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<title></title>
+</head>
+<body>
+<div class="container">
+	<h2>Bussiness card form</h2>
+
+	<form action="/form" method="POST" enctype="multipart/form-data">
+  		<div class="form-group">
+    		<p>
+				{{form.firstname.label}}<br>
+				{{form.firstname(size=30,required='required')}}
+			</p>
+    		
+  		</div>
+  		<div class="form-group">
+   			<p>
+				{{form.lastname.label}}<br>
+				{{form.lastname(size=30,required='required')}}
+			</p>
+  		</div>
+  		<div class="form-group">
+   			<p>
+				{{form.email.label}}<br>
+				{{form.email(size=30,required='required')}}
+			</p>
+  		</div>
+
+  		<div class="form-group">
+    		<label>Select Text Color</label>
+    		<input type="color" value="#ff0000" name="color_pick">
+  		</div>
+
+
+  		<div class="form-group">
+    		<label>Put a phone number</label><br>
+    		<input type="tel" id="phone" name="phone"pattern="[0-9]{10}"required>
+  		</div>
+
+
+  		<div class="form-group">
+    		<label>Occupation</label><br>
+    		<input type="text" id="occupation" name="occupation" required>
+  		</div>
+  		
+
+  		
+
+  		<div class="form-group">
+          <label>Select image</label>
+          <div class="custom-file">
+		  <!-- name= "image" e important -->
+            <input type="file" class="custom-file-input" name="image" id="image" oninput="filesize(this);">
+            <label class="custom-file-label" for="image">Select image...</label>
+          </div>
+        </div>
+  	
+  		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
